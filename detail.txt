@@ -1,0 +1,82 @@
+	INSTALLATION AND SETTING UP GIT
+1. git --version
+
+2. git config --global user.name sonali-3572	
+	to set username(sonali-3572)
+3. git config --global user.email sonalichaurasiya001@gmail.com
+	to set email(git will use this information to identify who made specific changes to file)
+
+	
+	HOW TO CREATE AND INITIALIZE A PROJECT IN GIT 
+	 (if folder in desktop "git and github")
+4.  cd desktop
+    cd git and github     (navigate to your new project location)
+
+5. git init
+	this initialize you project and tell git to get ready to start watching your files for every changes that occurs.
+	the response sent back telling me that my repository(repo) has been initialized. It is considered empty because we 	have not told Git what files to track.
+
+
+	HOW TO ADD FILES IN GIT
+6. git add . 
+	the . that comes after add means all the files that exist in the repository.
+7. git add todo.txt
+	if you want to add a specific file
+8. git status
+	to know what state your file is in
+
+
+	HOW TO COMMIT FILES IN GIT
+9. git commit -m "first commit"
+	- to commit our file which are in staged state
+	The first part of the command git commit tells Git that all the files staged are ready to be committed so it is 	time to take a snapshot. The second part -m "first commit" is the commit message. -m is shorthand for message 	while the text inside the parenthesis is the commit message.
+
+
+	PUSH THE REPOSITORY TO GITHUB
+10. git remote add origin https://github.com/sonali-3572/git-and-github.git
+	this commend creates a connection btw local repo(git bash) with the remote repo on github
+
+11. git branch -M main
+	this changes your main branch name to main. the default branch might be created as "master"
+
+12 git push -u arigin main
+	this command pushes you repo from your local device to github
+
+	(Note: above 3 command are compulsory to run to push repository on github)
+	Note : 
+		We first add the file by using git add . which adds all the files in the folder (one file in our case). 		Then we commit the file by running git commit -m "added new task" followed by git push -u origin main.
+
+
+
+
+
+	HOW TO USE BRANCHES IN GIT
+
+DESCRIPTION:- 
+With branches, you can create a copy of a file you would like to work on without messing up the original copy. You can either merge these changes to the original copy or just let the branch remain independent.
+
+13. git checkout -b test
+	checkout tells git it is supposed to switch to a new branch.
+	-b tells git to create a new branch.
+	test is the name of the branch to br create and switched to.
+	(As a hint, add the file and then commit with a message (refer to the previous section for details showing you 	 	how to do that).)
+
+14. git checkout main
+	After committing your test branch, switch back to the main branch by running this command
+	Did you notice that we did not add -b ? This is because we are not creating a new branch but rather 		switching to an existing one
+
+15. git branch
+	you can check all the branches that exist in your repo by running this command
+16. git merge test
+	now we can merge the changes we made in the test branch into the main branch
+
+
+	HOW TO PULL  REPOSITORY IN GIT
+DESCRIPTION: To pull in Git means to clone a remote repository's current state into your computer/repository. This comes in handy when you want to work on your repo from a different computer or when you are contributing to an open source project online.
+	To test this, don't worry about switching to a new computer. Just run cd .. to leave the current directory and go back one step. In my own case, I have navigated back to my desktop.
+	Go to GitHub, and on your repository's main page you should see a green button that says "Code". When you click on the button, you should see some options in a dropdown menu. Go on and copy the HTTPS URL.
+	After that, run git clone YOUR_HTTPS_URL. This command pulls the remote repository into your local computer in a folder called git-and-git-tutorial.
+
+17. git clone httpsurl
+
+GitHub is an online hosting service for Git repositories. 
